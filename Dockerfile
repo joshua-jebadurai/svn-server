@@ -15,7 +15,7 @@ RUN apt-get update && \
     usermod -a -G subversion www-data && \
     usermod -a -G subversion root && \
     chown -R www-data:subversion ${PROJECT_PATH} && \
-    chmod -R g+rws ${PROJECT_PATH} && \
+    chmod -R g+rws ${PROJECT_PATH}
     
 COPY dav_svn.conf /etc/apache2/mods-enabled/
 COPY startup.sh /
